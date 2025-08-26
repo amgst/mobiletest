@@ -6,7 +6,7 @@ exports.handler = async function(event, context) {
     if (!connectionString) {
         return {
             statusCode: 500,
-            body: JSON.stringify({ error: 'Database connection string is not set.' })
+            body: JSON.stringify({ error: 'Database connection string is not set. Please set the DATABASE_URL environment variable in your Netlify settings.' })
         };
     }
 
